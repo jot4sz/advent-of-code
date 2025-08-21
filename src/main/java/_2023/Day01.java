@@ -1,5 +1,7 @@
 package _2023;
 
+import model.Day;
+
 import java.util.*;
 
 public class Day01 extends Day {

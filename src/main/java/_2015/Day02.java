@@ -1,8 +1,10 @@
 package _2015;
 
+import model.Day;
+
 import java.util.*;
 
-public class Day02 extends Day{
+public class Day02 extends Day {
 
     public static int calculateAreaOfBox(int l, int w, int h){
         List<Integer> sides = new ArrayList<>();
@@ -48,7 +50,6 @@ public class Day02 extends Day{
                     int shortestSide2 = sides[1];
 
                     int sum = 2*(shortestSide1+shortestSide2) + volume;
-
                     return sum;
                 })
                 .sum();

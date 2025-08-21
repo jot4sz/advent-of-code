@@ -1,5 +1,7 @@
 package _2015;
 
+import model.Day;
+
 import java.util.ArrayList;
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package _2015;
+package model;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -12,7 +12,7 @@ public class Day {
         List<String> lines = new ArrayList<>();
         try {
 
-            FileReader file = new FileReader("src/main/resources/inputs/_2015/".concat(this.getClass().getSimpleName().toLowerCase().concat(".txt")));
+            FileReader file = new FileReader("src/main/resources/inputs/".concat(this.getClass().getPackageName() + "/").concat(this.getClass().getSimpleName().toLowerCase().concat(".txt")));
             BufferedReader readFile = new BufferedReader(file);
 
             String line = readFile.readLine();
