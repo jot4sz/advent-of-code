@@ -11,8 +11,9 @@ public class Day {
     public List<String> readsInput(){
         List<String> lines = new ArrayList<>();
         try {
-
-            FileReader file = new FileReader("src/main/resources/inputs/".concat(this.getClass().getPackageName() + "/").concat(this.getClass().getSimpleName().toLowerCase().concat(".txt")));
+            FileReader file = new FileReader("src/main/resources/inputs/"
+                    .concat(this.getClass().getPackageName() + "/")
+                    .concat(this.getClass().getSimpleName().concat(".txt").toLowerCase()));
             BufferedReader readFile = new BufferedReader(file);
 
             String line = readFile.readLine();
