@@ -33,7 +33,32 @@ public class Day04 extends Day {
         }
     }
 
+    public Integer findAdventCoinNonceWithSixZeros() throws NoSuchAlgorithmException {
+
+        StringBuilder secretKey = new StringBuilder(this.readsInput().getFirst());
+        MessageDigest messageDigest = MessageDigest.getInstance("MD5");
+        byte[] digest;
+        StringBuilder convertedHash = new StringBuilder();
+        int i = 1;
+
+        while(true) {
+
+            var input = secretKey.toString() + i;
+            digest = messageDigest.digest(input.getBytes(StandardCharsets.UTF_8));
+            convertedHash.setLength(0);
+
+            for (byte b : digest) {
+                convertedHash.append(String.format("%02x", b));
+            }
+
+            if(convertedHash.toString().startsWith("000000")){
+                return i;
+            }
+            i++;
+        }
+    }
+
     public static void main(String[] args) throws NoSuchAlgorithmException {
-        System.out.println(new Day04().findAdventCoinNonce());
+        System.out.println(new Day04().findAdventCoinNonceWithSixZeros());
     }
 }
